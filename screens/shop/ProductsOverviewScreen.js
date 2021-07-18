@@ -17,7 +17,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import HeaderButton from '../../components/UI/HeaderButton'
 
 import Colors from '../../constants/Colors'
-import { set } from 'react-native-reanimated'
+// import { set } from 'react-native-reanimated'
 
 const ProductsOverviewScreen = (props) => {
   const [isLoading, setIsLoading] = useState(false)
