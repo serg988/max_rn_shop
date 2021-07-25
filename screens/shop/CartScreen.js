@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
 })
 
-CartScreen.navigationOptions = {
+export const screenOptions = {
   headerTitle: 'Your Cart',
 }
 

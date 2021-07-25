@@ -39,10 +39,10 @@ const ProductsOverviewScreen = (props) => {
   }, [dispatch, setError, setIsLoading])
 
   useEffect(() => {
-    const willFocusSub = props.navigation.addListener('willFocus', loadProducts)
+    const unsubscribe = props.navigation.addListener('focus', loadProducts)
 
     return () => {
-      willFocusSub.remove()
+      unsubscribe()
     }
   }, [loadProducts])
 
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
 })
 
-ProductsOverviewScreen.navigationOptions = (navData) => {
+export const screenOptions = (navData) => {
   return {
     headerTitle: 'All Products',
     headerLeft: () => (
